@@ -62,7 +62,7 @@ function Sidebar() {
                     </div>
                 ) : (
                     <div className="auth">
-                        {/* Render authentication links or components here */}
+                        
                     </div>
                 )}
                 <Link to="/internship">Internships</Link>
@@ -84,10 +84,10 @@ function Sidebar() {
                     </div>
                 ) : (
                     <div className="addmore">
-                        <Link to="/register-student">
+                        <Link to="/register">
                             <p>Register - As a Student</p>
                         </Link>
-                        <Link to="/register-employer">
+                        <Link to="/register">
                             <p>Register - As an Employer</p>
                         </Link>
                     </div>

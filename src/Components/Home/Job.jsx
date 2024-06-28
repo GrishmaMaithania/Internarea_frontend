@@ -11,13 +11,13 @@ function Job() {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get(`https://internarea-backend-qfpt.onrender.com/api/job`);
+                const response = await axios.get(`https://internarea-backend-5p54.onrender.com/api/job`);
                 setJobData(response.data);
             } catch (error) {
                 console.log(error);
             }
         };
-        // Call fetchData here
+      
         fetchData();
     }, []); 
     

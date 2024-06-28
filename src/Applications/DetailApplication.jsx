@@ -9,7 +9,7 @@ function DetailApplication() {
 const id=params.get("q")
 useEffect(()=>{
    const fetchData= async()=>{
-  const response=await axios.get(`https://internarea-backend-qfpt.onrender.com/api/application/${id}`)
+  const response=await axios.get(`https://internarea-backend-5p54.onrender.com/api/application/${id}`)
 
   setData([response.data])
    }
@@ -17,7 +17,7 @@ useEffect(()=>{
 },[id])
 const handleAcceptAndReject= async(id,action)=>{
   try {
-    const response=await axios.put(`https://internarea-backend-qfpt.onrender.com/api/application/${id}`,{action})
+    const response=await axios.put(`https://internarea-backend-5p54.onrender.com/api/application/${id}`,{action})
     const UpdateApplication=data.map(app=>(app._id===id?response.data.data:app))
     setData(UpdateApplication)
 

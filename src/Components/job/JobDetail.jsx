@@ -9,7 +9,7 @@ function JobDetail() {
   const user = useSelector(selectUser);
   const [isDivVisible, setDivVisible] = useState(false);
   const [textarea, setTextarea] = useState('');
-  const [jobDetails, setJobDetails] = useState(null); // Initialize as null to handle loading state
+  const [jobDetails, setJobDetails] = useState(null); 
   const navigate = useNavigate();
   const location = useLocation();
   const params = new URLSearchParams(location.search);
@@ -18,7 +18,7 @@ function JobDetail() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(`https://internarea-backend-qfpt.onrender.com/api/job/${id}`);
+        const response = await axios.get(`https://internarea-backend-5p54.onrender.com/api/job/${id}`);
         console.log(response.data); 
         setJobDetails(response.data);
       } catch (error) {
@@ -60,7 +60,7 @@ function JobDetail() {
   };
 
   if (!jobDetails) {
-    return <div>Loading...</div>; // Display loading state
+    return <div>Loading...</div>; 
   }
 
   return (

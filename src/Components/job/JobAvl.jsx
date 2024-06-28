@@ -14,8 +14,8 @@ function JobAvl() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(`https://internarea-backend-qfpt.onrender.com/api/job`);
-        console.log(response.data); // Log the API response to check data structure
+        const response = await axios.get(`https://internarea-backend-5p54.onrender.com/api/job`);
+        console.log(response.data);
         setJobData(response.data);
         setFilterJob(response.data);
       } catch (error) {
@@ -154,7 +154,7 @@ function JobAvl() {
 
       {isDivVisible && (
         <div className="first2-int mb-14">
-          <div className="filter-section w-1/6">
+          <div className="filter-section "style={{ width: '75%', left:'-10%' }}>
             <button id='close-btn' onClick={hideDiv}><i className="text-3xl bi bi-x"></i></button>
             <p className='text-center'><i className="bi bi-funnel text-blue-400"></i> Filter</p>
             <div className='fill flex flex-col ml-2'>
@@ -193,6 +193,14 @@ function JobAvl() {
             <p className='mt-5 text-blue-400'>View more filters <i className="bi bi-chevron-down"></i></p>
             <span className='justify-end flex text-blue-400 mr-3'>Clear all</span>
           </div>
+          <div className="search-2"  style={{ width: '75%', left:'-10%' }}><div className="search-container">
+  <label htmlFor="ex ">Experience</label>
+  <input type="text" id='ex' placeholder='eg. 0-1 year' />
+  <div className="search-icon">
+  <i class="bi bi-search"></i>
+  </div>
+  </div>
+  </div>
         </div>
       )}
     </>

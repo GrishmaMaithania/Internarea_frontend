@@ -52,7 +52,7 @@ function PostJOb() {
           AdditionalInfo:additionalInfo,
   
       }
-  axios.post("https://internarea-backend-qfpt.onrender.com/api/job",bodyJosn).then((res)=>{
+  axios.post("https://internarea-backend-5p54.onrender.com/api/job",bodyJosn).then((res)=>{
       console.log(res.data)
     }).catch((err)=>
     console.log(err))

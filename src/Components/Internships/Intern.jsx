@@ -22,7 +22,7 @@ const showDiv=()=>{
     useEffect(()=>{
       const fetchData= async()=>{
           try {
-          const response= await axios.get(`https://internarea-backend-qfpt.onrender.com/api/internship`)
+          const response= await axios.get(`https://internarea-backend-5p54.onrender.com/api/internship`)
           setInternData(response.data)
           setFilterInternship(response.data);
           console.log(response.data)
@@ -61,13 +61,14 @@ const showDiv=()=>{
     console.log(filterInternship)
   
   return (
+    
     <div className='flex internship-filter'>
     <div className="first-int mb-14">
       <div className="filter-section w-1/6">
     <p id='filter-ico' className=' text-center' ><i  class="bi bi-funnel  text-blue-400"></i> Filter</p>
     <div className='fill flex flex-col ml-2'>
     <label htmlFor="pro">Profile</label>
-    <input type="text" id='pro' value={searchCategory} onChange={handleCategoryChange}  className='profile border-2 mr-3 w-full' placeholder='Profile manager'/>
+    <input type="text" id='pro' value={searchCategory} onChange={handleCategoryChange}  className='profile border-2 mr-3 w-full'placeholder='Profile manager'/>
     <label htmlFor="loc">Location</label>
     <input type="text" id='loc' value={searchLocation} onChange={handleCategoryLocationChange}  className='location border-2 -ml-6 w-full' placeholder='Mumbai'/>
     </div>
@@ -145,7 +146,7 @@ const showDiv=()=>{
   isDivVisible &&(
     <>
     <div className="first2-int mb-14">
-  <div className="filter-section w-1/6">
+    <div className="filter-section" style={{ width: '75%', left:'-10%' }}>
       <button id='close-btn' onClick={hidediv}><i class=" text-3xl bi bi-x"></i></button>
 <p className='text-center'><i class="bi bi-funnel  text-blue-400"></i> Filter</p>
 <div className='fill flex flex-col ml-2'>
@@ -171,13 +172,14 @@ const showDiv=()=>{
 <p className= ' mt-5 text-blue-400'>View more filters <i class="bi bi-chevron-down"></i></p>
 <span className='justify-end flex text-blue-400 mr-3'>Clear all</span>
 </div>
-<div className="search-2"><div className="search-container">
+<div className="search-2"  style={{ width: '75%', left:'-10%' }}><div className="search-container">
   <label htmlFor="ex ">Experience</label>
   <input type="text" id='ex' placeholder='eg. 0-1 year' />
   <div className="search-icon">
   <i class="bi bi-search"></i>
   </div>
-  </div></div>
+  </div>
+  </div>
   </div>
     </>
   )

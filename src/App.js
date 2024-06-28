@@ -1,9 +1,12 @@
 import React, { useEffect } from 'react';
 import './App.css';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 import Navbar from './Components/Navbar/Navbar';
 import Footer from './Components/Footerr/Footer';
 import Home from './Components/Home/Home';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, useLocation } from 'react-router-dom'; // Import useLocation
 import Register from './Components/auth/Register';
 import Intern from './Components/Internships/Intern';
 import JobAvl from './Components/job/JobAvl';
@@ -21,10 +24,14 @@ import ViewAllApplication from './Admin/ViewAllApplication';
 import DetailApplication from './Applications/DetailApplication.jsx';
 import UserApplication from './profile/UserApplication.jsx';
 import DetailApplicationUser from './Applications/DetailApplicationUser.jsx';
+import AccessRestricted from './Components/AccessRestricted'; 
+
+import GoogleTranslate from './GoogleTranslate';
 
 function App() {
   const user = useSelector(selectUser);
   const dispatch = useDispatch();
+  const location = useLocation(); // Get the current location
 
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged((authUser) => {
@@ -43,9 +50,13 @@ function App() {
     return () => unsubscribe();
   }, [dispatch]);
 
+  // Conditionally render Navbar and Footer based on the current route
+  const shouldShowNavbarAndFooter = !location.pathname.includes('/access-restricted');
+
   return (
     <div className="App">
-      <Navbar />
+      {shouldShowNavbarAndFooter && <Navbar />}
+      <GoogleTranslate />
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/register' element={<Register />} />
@@ -61,9 +72,13 @@ function App() {
         <Route path='/applications' element={<ViewAllApplication />} />    
         <Route path='/detailApplication' element={<DetailApplication />} /> 
         <Route path='//UserapplicationDetail' element={<DetailApplicationUser />} />    
-        <Route path='/userapplication' element={<UserApplication />} />      
+        <Route path='/userapplication' element={<UserApplication />} />  
+
+      
+        <Route path='/access-restricted' element={<AccessRestricted />} />  {/* Keep this outside the conditional rendering */}
       </Routes>
-      <Footer />
+      {shouldShowNavbarAndFooter && <Footer />}
+      <ToastContainer />
     </div>
   );
 }

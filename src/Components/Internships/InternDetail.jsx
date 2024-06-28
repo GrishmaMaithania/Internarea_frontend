@@ -27,8 +27,8 @@ function InternDetail() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(`https://internarea-backend-qfpt.onrender.com/api/internship/${id}`);
-        console.log('Fetched Data:', response.data); // Debugging statement
+        const response = await axios.get(`https://internarea-backend-5p54.onrender.com/api/internship/${id}`);
+        console.log('Fetched Data:', response.data); 
         setInternship(response.data);
       } catch (error) {
         setError('Failed to fetch internship details');
@@ -51,7 +51,7 @@ function InternDetail() {
       };
 
       try {
-        await axios.post('https://internarea-backend-qfpt.onrender.com/api/application', bodyJson);
+        await axios.post('https://internarea-backend-5p54.onrender.com/api/application', bodyJson);
         alert('Application submitted successfully');
         navigate('/Jobs');
       } catch (error) {

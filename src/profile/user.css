@@ -9,9 +9,8 @@
     font-size: 16px;
     border-radius: 2px;
 }
-/* admin.css */
 
-/* Hide the large screen section on small screens */
+
 @media (max-width: 640px) {
   .hide {
       display: none;
@@ -21,10 +20,8 @@
   }
 }
 
-/* Hide the small screen section on large screens */
-/* admin.css */
 
-/* Hide the large screen section on small screens */
+
 @media (max-width: 640px) {
   .hide {
       display: none;
@@ -34,7 +31,7 @@
   }
 }
 
-/* Hide the small screen section on large screens */
+
 @media (min-width: 641px) {
   .hide {
       display: block;

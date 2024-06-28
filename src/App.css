@@ -1,0 +1,43 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+@media (max-width: 1023px) {
+    header {
+      padding: 2rem; /* Medium padding for tablets */
+    }
+  
+    .container {
+      padding: 2rem; /* Medium padding for tablets */
+    }
+  
+    .navbar {
+      padding: 0.75rem; /* Adjust padding for tablets */
+    }
+  
+    .footer {
+      padding: 0.75rem; /* Adjust padding for tablets */
+    }
+  }
+  
+  /* Adjustments for mobile devices */
+  @media (max-width: 599px) {
+    header {
+      padding: 1rem; /* Smaller padding for mobile */
+    }
+  
+    .container {
+      padding: 1rem; /* Smaller padding for mobile */
+    }
+  
+    .navbar {
+      padding: 0.5rem; /* Minimal padding for mobile */
+    }
+  
+    .footer {
+      padding: 0.5rem; /* Minimal padding for mobile */
+    }
+  }
+  

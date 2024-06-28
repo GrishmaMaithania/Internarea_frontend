@@ -17,7 +17,7 @@ else{
         username:username,
         password:password
     }
-    axios.post("https://internarea-backend-qfpt.onrender.com/api/admin/adminLogin",bodyjson).then((res)=>{
+    axios.post("https://internarea-backend-5p54.onrender.com/api/admin/adminLogin",bodyjson).then((res)=>{
         console.log(res,"data is send")
         alert("success")
         navigate("/adminpanel")

@@ -9,7 +9,7 @@ function DetailApplicationUser() {
 const id=params.get("q")
 useEffect(()=>{
    const fetchData= async()=>{
-  const response=await axios.get(`https://internarea-backend-qfpt.onrender.com/api/application/${id}`)
+  const response=await axios.get(`https://internarea-backend-5p54.onrender.com/api/application/${id}`)
 
   setData([response.data])
    }

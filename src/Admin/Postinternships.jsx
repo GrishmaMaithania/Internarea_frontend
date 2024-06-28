@@ -52,7 +52,7 @@ function Postinternships() {
           AdditionalInfo:additionalInfo,
   
       }
-  axios.post("https://internarea-backend-qfpt.onrender.com/api/internship",bodyJosn).then((res)=>{
+  axios.post("https://internarea-backend-5p54.onrender.com/api/internship",bodyJosn).then((res)=>{
       console.log(res.data)
     }).catch((err)=>
     console.log(err))
